@@ -608,7 +608,7 @@ local drawing = {} do
                     return signalnames[k]
                 end
 
-                return customproperties[k] or obj[k]
+                return customproperties[k] or rawget(obj, k)
             end,
 
             __newindex = function(self, k, v)
